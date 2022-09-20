@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Nieruchomosci.Data.Data.CMS.Parametr>
+                   <!-- footer -->	
+                <footer class="main-footer fl-wrap">
+                    <div class="footer-inner fl-wrap">
+                        <div class="container">
+                            <div class="row">
+                                <!-- footer widget-->
+                               @await Html.PartialAsync("Godziny", (IEnumerable<Nieruchomosci.Data.Data.CMS.Parametr>)ViewBag.ModelGodziny)			
+
+                                <!-- footer widget end-->
+                                <!-- footer widget-->
+                                 @await Html.PartialAsync("LinkiStopka", (IEnumerable<Nieruchomosci.Data.Data.CMS.Strona>)ViewBag.ModelStrony)			
+                                <!-- footer widget end--> 
+                                <!-- footer widget-->
+                                <div class="col-md-3">
+                                    <div class="footer-widget fl-wrap">
+                                        <div class="footer-widget-title fl-wrap">
+                                            <h4>Kontakt</h4>
+                                        </div>
+                                        <ul  class="footer-contacts fl-wrap">
+                                            <li><span><i class="fal fa-envelope"></i> Email :</span><a href="#" target="_blank">nieruchomosci@gmail.com</a></li>
+                                            <li> <span><i class="fal fa-map-marker"></i> Adres :</span><a href="#" target="_blank">Warszawa ul. Narutowicza 11C</a></li>
+                                            <li><span><i class="fal fa-phone"></i> Telefon :</span><a href="#">+48-665-691-123</a></li>
+                                        </ul>
+                                        <div class="footer-social fl-wrap">
+                                            <ul>
+                                                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- footer widget end-->   
+                                <!-- footer widget-->
+                                <div class="col-md-3">
+                                    <div class="footer-widget fl-wrap">
+                                        <div class="footer-widget-title fl-wrap">
+                                            <h4>Pobierz naszą aplikacje</h4>
+                                        </div>
+                                        <p>Rozpocznij pracę z naszą aplikacją, która zapewni wszystko czego potrzebujesz</p>
+                                        <div class="api-links fl-wrap">
+                                            <a href="#" class="api-btn color-bg"><i class="fab fa-apple"></i> Sklep</a>  
+                                            <a href="#" class="api-btn color-bg"><i class="fab fa-google-play"></i> Google Play</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- footer widget end-->                                     
+                            </div>
+                        </div>
+                    </div>
+                    <!--sub-footer-->
+                    <div class="sub-footer gray-bg fl-wrap">
+                        <div class="container">
+                            <div class="copyright"> Wojciech Poraziński .  Wszelkie prawa zastrzeżone.</div>
+                            <div class="subfooter-nav">
+                                <ul class="no-list-style">
+                                    <li><a href="#">Warunki Używania</a></li>
+                                    <li><a href="#">Polityka Prywatności</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--sub-footer end -->                     
+                </footer>

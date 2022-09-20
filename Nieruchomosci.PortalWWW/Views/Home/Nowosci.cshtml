@@ -1,0 +1,59 @@
+﻿@model Nieruchomosci.Data.Data.CMS.Strona
+@{
+        ViewData["Title"] = @Model.LinkTytul;
+        Layout = "~/Views/Shared/_Layout.cshtml";
+}
+               <div class="content">
+                    <!--  section  -->
+                    <section class="hidden-section single-par2  " data-scrollax-parent="true">
+                        <div class="bg-wrap bg-parallax-wrap-gradien">
+                            <div class="bg par-elem " data-scrollax="properties: { translateY: '30%' }"><img src="@Model.Foto" alt=""></div>
+                        </div>
+                        <div class="container">
+                            <div class="section-title center-align big-title">
+                                <h2><span>@Model.Tytul</span></h2>
+                                <h4>@Model.Tresc</h4>
+                            </div>
+                        </div>
+                    </section>
+                    <!--  section  end-->
+                    <!-- breadcrumbs-->
+                    <div class="breadcrumbs fw-breadcrumbs sp-brd fl-wrap">
+                        <div class="container">
+                            <div class="breadcrumbs-list">
+                                <a href="#">Strona Główna</a> <span>Nowości</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- breadcrumbs end -->
+                    <!-- col-list-wrap -->
+                    <div class="gray-bg small-padding fl-wrap">
+                        <div class="container">
+                            <div class="row">
+                       @await Html.PartialAsync("Aktualnosci",(IEnumerable<Nieruchomosci.Data.Data.CMS.Aktualnosc>)ViewBag.ModelAktualnosci)
+
+                                <!-- col-md 8 end -->
+                                <!--  sidebar-->
+                                <div class="col-md-4">
+                                    <div class="box-widget-wrap fl-wrap fixed-bar">
+                                        <!--box-widget-->
+                                        <div class="box-widget fl-wrap">
+                                            <div class="search-widget fl-wrap">
+                                                <form action="#" class="fl-wrap custom-form">
+                                                    <input name="se" id="se" type="text" class="search" placeholder="Search.." value="" />
+                                                    <button class="search-submit" id="submit_btn"><i class="far fa-search"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--box-widget end -->										
+                                        @await Html.PartialAsync("Posty",(IEnumerable<Nieruchomosci.Data.Data.CMS.Post>)ViewBag.ModelPostyMiasto)
+																																
+                                    </div>
+                                    <!-- sidebar end-->								
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="limit-box fl-wrap"></div>
+                </div>
+                <!-- content end -->	

@@ -1,0 +1,108 @@
+﻿@model IEnumerable<Nieruchomosci.Data.Data.CMS.Strona>
+
+@{
+    ViewData["Title"] = "Strony";
+}
+
+<h1>Strony</h1>
+
+<p>
+    <a asp-action="Create">Nowa strona</a>
+</p>
+<table class="table table-striped" id="dtHorizontalExample"  cellspacing="0"
+  width="100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkTytul)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tytul)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Foto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ikona)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tresc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pozycja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataUtworzenia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PracownikDodajacy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataEdycji)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PracownikEdytujacy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataUsuniecia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PracownikUsuwajacy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CzyAktywny)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkTytul)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tytul)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Foto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ikona)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tresc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pozycja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataUtworzenia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PracownikDodajacy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataEdycji)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PracownikEdytujacy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataUsuniecia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PracownikUsuwajacy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CzyAktywny)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdStrony">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdStrony">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdStrony">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

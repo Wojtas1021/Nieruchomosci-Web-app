@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Nieruchomosci.Data.Data.CMS.Parametr>
+<div class="services-opions fl-wrap">
+    @foreach (var item in Model)
+    {
+        <ul>
+            <li>
+                <i class="@item.Przycisk"></i>
+                <h4>@item.Nazwa</h4>
+                <p>@item.Wartosc</p>
+            </li>
+        </ul>
+    }
+</div>

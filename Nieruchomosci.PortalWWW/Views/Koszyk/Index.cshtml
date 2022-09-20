@@ -1,0 +1,80 @@
+﻿@model Nieruchomosci.PortalWWW.Models.NieruchomosciSklep.DaneDoKoszyka
+@{
+    ViewData["Title"] = "Koszyk";
+    Layout = "~/Views/Shared/_KoszykLayout.cshtml";
+}
+<div class="content">
+    <div class="gray-bg small-padding fl-wrap">
+        <div class="container">
+            <div class="row">
+                <!--  listing-single content -->
+                <div class="col-md-8">
+                    <div class="list-single-main-wrapper fl-wrap">
+                        <!--  list-single-header-item-->
+                        <div class="list-single-header-item  fl-wrap" id="sec1">
+                            <div class="row">
+                                    <!--box-widget-->
+                                    <div class="box-widget fl-wrap">
+                                        <div class="box-widget-title fl-wrap">Nieruchomości</div>
+                                        <div class="box-widget-content fl-wrap">
+                                            <!--widget-posts-->
+                                            <div class="widget-posts  fl-wrap">
+                                                <ul class="no-list-style">
+                                                    @foreach(var item in Model.ElementKoszyka)
+                                                    {
+                                                    <li>
+                                                        <div class="widget-posts-img"><a href="listing-single.html"><img src="@item.Nieruchomosc.Foto" alt=""></a>  
+                                                        </div>
+                                                        <div class="widget-posts-descr">
+                                                            <h4><a href="listing-single.html">@item.Nieruchomosc.Tytul</a></h4>
+                                                            <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i>@item.Nieruchomosc.Adres</a></div>
+                                                            <div class="widget-posts-descr-price"><span>Price: </span>@item.Nieruchomosc.Cena</div>
+                                                            <div class="widget-posts-descr-price"><span>Quantity: </span>@item.Ilosc</div>
+                                                        </div>
+                                                    </li>
+                                                    }
+                                                </ul>
+                                            </div>
+                                            <!-- widget-posts end-->                                                           
+                                            <a href="listing.html" class="btn float-btn color-bg small-btn">Wszystkie</a>
+                                        </div>
+                                    </div>
+                                    <!--box-widget end --> 
+                            </div>
+                        </div>
+                        <div class="list-single-main-media fl-wrap">
+                            <div class="single-slider-wrapper carousel-wrap fl-wrap">
+                                <div class="swiper-button-prev ssw-btn"><i class="fas fa-caret-left"></i></div>
+                                <div class="swiper-button-next ssw-btn"><i class="fas fa-caret-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- listing-single content end-->
+                <!-- sidebar -->
+                <div class="col-md-4">
+                    <!--box-widget-->
+                    <div class="box-widget fl-wrap hidden-section" style="margin-top: 30px">
+                        <div class="box-widget-content fl-wrap color-bg">
+                            <div class="color-form reset-action">
+                                <div class="color-form-title fl-wrap">
+                                    <h4>Razem</h4>
+                                </div>
+                                <form method="post" name="mortgage-form">
+                                    <div class="monterage-title fl-wrap">
+                                        <h5>Razem:</h5>
+                                        <div class="monterage-title-item">$<span>@Model.Razem</span></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!--box-widget end -->
+                </div>
+                <!--  sidebar end-->
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+    </div>
+</div>
+<!-- content end -->

@@ -1,0 +1,64 @@
+﻿@model Nieruchomosci.Data.Data.CMS.Strona
+@{
+    ViewData["Title"] = @Model.LinkTytul;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <!--  section  -->
+    <section class="hidden-section single-par2  " data-scrollax-parent="true">
+        <div class="bg-wrap bg-parallax-wrap-gradien">
+            <div class="bg par-elem " data-scrollax="properties: { translateY: '30%' }"><img src="@Model.Foto" alt=""></div>
+        </div>
+        <div class="container">
+            <div class="section-title center-align big-title">
+                <h2><span>@Model.Tytul</span></h2>
+                <h4>@Model.Tresc</h4>
+            </div>
+        </div>
+    </section>
+    <!--  section  end-->
+    <!-- breadcrumbs-->
+    <div class="breadcrumbs fw-breadcrumbs sp-brd fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+            </div>
+            <div class="share-holder hid-share">
+                <a href="#" class="share-btn showshare sfcs">  <i class="fas fa-share-alt"></i>   </a>
+                <div class="share-container  isShare"></div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumbs end -->
+                @await Html.PartialAsync("ParametryNowosci", (IEnumerable<Nieruchomosci.Data.Data.CMS.Parametr>)ViewBag.ModelTechniczne)
+    <!-- section -->
+    <section>
+        <div class="container">
+            <!--about-wrap -->
+            <div class="about-wrap">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="about-title fl-wrap">
+                            <h2>Nasza Firma <span>Historia</span></h2>
+                        </div>
+                        <p>Ut euismod ultricies sollicitudin. Curabitur sed dapibus nulla. Nulla eget iaculis lectus. Mauris ac maximus neque. Nam in mauris quis libero sodales eleifend. Morbi varius, nulla sit amet rutrum elementum, est elit finibus tellus, ut tristique elit risus at metus.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat. Curabitur convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a consequat purus viverra.
+                        </p>
+                        <a href="#" class="btn small-btn float-btn color-bg">Read More</a>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <div class="about-img fl-wrap">
+                            <img src="~/img/Biuro (3).jpg" class="respimg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- about-wrap end  -->
+        </div>
+    </section>
+    <!-- section end-->
+    @await Html.PartialAsync("Rekomendacje",(IEnumerable<Nieruchomosci.Data.Data.CMS.Rekomendacja>)ViewBag.ModelRekomendacje)
+
+</div>
+

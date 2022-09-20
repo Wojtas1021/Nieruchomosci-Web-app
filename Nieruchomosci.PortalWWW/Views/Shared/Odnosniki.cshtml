@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Nieruchomosci.Data.Data.CMS.Strona>
+<div class="nav-holder main-menu">
+    <nav>
+        <ul class="no-list-style">
+                @foreach (var item in Model)
+                {
+                     <li>
+                        <a asp-controller="Home" asp-action="@item.NazwaWidoku" asp-route-id="@item.IdStrony">@item.LinkTytul</a>
+                    </li>
+                }
+        </ul>
+    </nav>
+</div>

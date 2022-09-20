@@ -1,0 +1,114 @@
+﻿@model IEnumerable<Nieruchomosci.Data.Data.CMS.Parametr>
+
+@{
+    ViewData["Title"] = "Parametr";
+}
+
+<h1>Parametr</h1>
+
+<p>
+    <a asp-action="Create">Nowy Parametr</a>
+</p>
+<table class="table table-striped" id="dtHorizontalExample"  cellspacing="0"
+  width="100%">    
+  <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Kod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nazwa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Wartosc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Opis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Komentarz)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Przycisk)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrescPrzycisku)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataUtworzenia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PracownikDodajacy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataEdycji)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PracownikEdytujacy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataUsuniecia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PracownikUsuwajacy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CzyAktywny)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nazwa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Wartosc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Opis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Komentarz)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Przycisk)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrescPrzycisku)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataUtworzenia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PracownikDodajacy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataEdycji)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PracownikEdytujacy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataUsuniecia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PracownikUsuwajacy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CzyAktywny)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdParametru">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdParametru">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdParametru">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

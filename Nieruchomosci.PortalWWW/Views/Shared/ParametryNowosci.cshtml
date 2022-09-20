@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Nieruchomosci.Data.Data.CMS.Parametr>
+<!-- section -->
+<section class="gray-bg small-padding">
+    <div class="container">
+        <div class="row">
+            <!-- services-item -->
+            @foreach(var item in Model)
+            {
+            <div class="col-md-4">
+                <div class="services-item fl-wrap">
+                    <i class="@item.Przycisk"></i>
+                    <h4>@item.Nazwa <span></span></h4>
+                    <p>@item.Wartosc</p>
+                    <a href="#" class="serv-link">@item.TrescPrzycisku</a>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
+<!-- section end-->

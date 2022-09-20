@@ -1,0 +1,98 @@
+﻿@model Nieruchomosci.Data.Data.CMS.Parametr
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Parametr</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Kod" class="control-label"></label>
+                <input asp-for="Kod" class="form-control" />
+                <span asp-validation-for="Kod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nazwa" class="control-label"></label>
+                <input asp-for="Nazwa" class="form-control" />
+                <span asp-validation-for="Nazwa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wartosc" class="control-label"></label>
+                <input asp-for="Wartosc" class="form-control" />
+                <span asp-validation-for="Wartosc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Opis" class="control-label"></label>
+                <input asp-for="Opis" class="form-control" />
+                <span asp-validation-for="Opis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Komentarz" class="control-label"></label>
+                <input asp-for="Komentarz" class="form-control" />
+                <span asp-validation-for="Komentarz" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Przycisk" class="control-label"></label>
+                <input asp-for="Przycisk" class="form-control" />
+                <span asp-validation-for="Przycisk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrescPrzycisku" class="control-label"></label>
+                <input asp-for="TrescPrzycisku" class="form-control" />
+                <span asp-validation-for="TrescPrzycisku" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataUtworzenia" class="control-label"></label>
+                <input asp-for="DataUtworzenia" class="form-control" />
+                <span asp-validation-for="DataUtworzenia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PracownikDodajacy" class="control-label"></label>
+                <input asp-for="PracownikDodajacy" class="form-control" />
+                <span asp-validation-for="PracownikDodajacy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataEdycji" class="control-label"></label>
+                <input asp-for="DataEdycji" class="form-control" />
+                <span asp-validation-for="DataEdycji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PracownikEdytujacy" class="control-label"></label>
+                <input asp-for="PracownikEdytujacy" class="form-control" />
+                <span asp-validation-for="PracownikEdytujacy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataUsuniecia" class="control-label"></label>
+                <input asp-for="DataUsuniecia" class="form-control" />
+                <span asp-validation-for="DataUsuniecia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PracownikUsuwajacy" class="control-label"></label>
+                <input asp-for="PracownikUsuwajacy" class="form-control" />
+                <span asp-validation-for="PracownikUsuwajacy" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="CzyAktywny" /> @Html.DisplayNameFor(model => model.CzyAktywny)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

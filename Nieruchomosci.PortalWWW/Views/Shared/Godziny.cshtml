@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Nieruchomosci.Data.Data.CMS.Parametr>
+
+<div class="col-md-3">
+    <div class="footer-widget fl-wrap">
+        <div class="fw_hours fl-wrap">
+
+            @foreach (var item in Model)
+            {
+                <span>@item.Nazwa<strong> @item.Wartosc</strong></span>
+            }
+        </div>
+    </div>
+</div>

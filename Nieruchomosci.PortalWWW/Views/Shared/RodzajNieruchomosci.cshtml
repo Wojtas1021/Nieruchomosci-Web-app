@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Nieruchomosci.Data.Data.Nieruchomosci.RodzajNieruchomosci>
+<div class="nav-holder main-menu">
+    <nav>
+        <ul class="no-list-style">
+            <li><a asp-controller="Home" asp-action="Index" asp-route-id="">Strona głowna</a><li>
+            @foreach(var item in Model)
+            {
+                <a asp-action="Index" asp-route-id="@item.IdRodzajuNieruchomosci">@item.Nazwa</a>
+@*                <li><a asp-controller="Nieruchomosci" asp-action="Index" asp-route-id="@item.IdRodzajuNieruchomosci">@item.Nazwa</a></li>         
+*@            }
+            <li><a asp-controller="Koszyk" asp-action="Index" asp-route-id="">Koszyk</a><li>
+        </ul>
+    </nav>
+</div>

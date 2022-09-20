@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Nieruchomosci.Data.Data.CMS.Post>
+    <!-- section  -->
+    <section class="hidden-section no-padding-section">
+        <div class="half-carousel-wrap">
+            <div class="half-carousel-title color-bg">
+                <div class="half-carousel-title-item fl-wrap">
+                    <h2>Zwiedzaj Najlepsze Miasta</h2>
+                    <h5></h5>
+                </div>
+                <div class="pwh_bg"></div>
+            </div>
+            <div class="half-carousel-conatiner">
+                <div class="half-carousel fl-wrap full-height">
+                    <!--slick-item -->
+                  @foreach(var item in Model)
+                   {
+                    <div class="slick-item">
+                        <div class="half-carousel-item fl-wrap">
+                            <div class="bg-wrap bg-parallax-wrap-gradien">
+                                <div class="bg"><img src="@item.Foto" /></div>
+                            </div>
+                            <div class="half-carousel-content">
+                                <h3><a href="">@item.LinkPostu</a></h3>
+                                <p>@item.Tresc</p>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                    <!--slick-item end -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--section end-->

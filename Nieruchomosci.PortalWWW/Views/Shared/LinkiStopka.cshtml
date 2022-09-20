@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Nieruchomosci.Data.Data.CMS.Strona>
+
+<div class="col-md-3">
+    <div class="footer-widget fl-wrap">
+        <div class="footer-widget-title fl-wrap">
+            <h4>Przydatne linki</h4>
+        </div>
+        <ul class="footer-list fl-wrap">
+            @foreach(var item in Model)
+            {
+            <li><a href="@item.LinkTytul">@item.LinkTytul</a></li>
+            }
+        </ul>
+    </div>
+</div>

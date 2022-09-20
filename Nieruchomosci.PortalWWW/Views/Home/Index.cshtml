@@ -1,0 +1,117 @@
+﻿@model Nieruchomosci.Data.Data.CMS.Strona
+@{
+    ViewData["Title"] = @Model.LinkTytul;
+}
+<!-- content -->
+<div class="content">
+    <!--  section  -->
+    <section class="hero-section hero-section_dec" data-scrollax-parent="true">
+        <div class="bg-wrap">
+            <div class="bg par-elem " data-scrollax="properties: { translateY: '20%' }"><img src="@Model.Foto" alt=""></div>
+        </div>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="hero-title hero-title_small">
+                <h4>@Model.Tytul</h4>
+                <h2>
+                    @Model.Tresc <br>
+
+                </h2>
+            </div>
+            <div class="main-search-input-wrap">
+                <div class="main-search-input fl-wrap">
+                    <div class="main-search-input-item">
+                        <input type="text" placeholder="Czego szukasz?" value="" />
+                    </div>
+                    <div class="main-search-input-item">
+                        <select data-placeholder="Wszystkie kategorie" class="chosen-select no-search-select">
+                            <option>Wszystkie</option>
+                            <option>Najem</option>
+                            <option>Sprzedaż</option>
+                        </select>
+                    </div>
+                    <div class="main-search-input-item">
+                        <select data-placeholder="Wszystkie kategorie" class="chosen-select">
+                            <option>Wszystkie</option>
+                            <option>Warszawa</option>
+                            <option>Kraków</option>
+                            <option>Poznań</option>
+                            <option>Gdańsk</option>
+                            <option>Szczecin</option>
+                            <option>Wrocław</option>
+                            <option>Toruń</option>
+                            <option>Katowice</option>
+                        </select>
+                    </div>
+                    <button class="main-search-button color-bg" onclick="window.location.href='listing.html'">  Szukaj <i class="far fa-search"></i> </button>
+                </div>
+            </div>
+            <div class="hero-notifer fl-wrap">Wiecej opcji wyszukiwania? <a href="listing.html">Zaawansowane wyszukiwanie</a> </div>
+            <div class="scroll-down-wrap">
+                <div class="mousey">
+                    <div class="scroller"></div>
+                </div>
+                <span>Przewiń w dół aby odkryć</span>
+            </div>
+        </div>
+    </section>
+    <!--  section  end-->
+    <!-- breadcrumbs-->
+    <div class="breadcrumbs fw-breadcrumbs sp-brd fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="#">Strona Główna</a>
+            </div>
+            <div class="share-holder hid-share">
+                <a href="#" class="share-btn showshare sfcs">  <i class="fas fa-share-alt"></i>  Udostępnij   </a>
+                <div class="share-container  isShare"></div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumbs end -->
+    <!-- section -->
+    <section class="gray-bg small-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="section-title fl-wrap">
+                        <h4>Zobacz Gorące Oferty</h4>
+                        <h2>Najnowsze Nieruchomości</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            @await Html.PartialAsync("Oferty", (IEnumerable<Nieruchomosci.Data.Data.Nieruchomosci.Nieruchomosc>)ViewBag.ModelOferty)
+            <a href="listing.html" class="btn float-btn small-btn color-bg">Zobacz Wszystkie</a>
+        </div>
+    </section>
+    <!-- section end-->
+    <!-- section -->
+    <section>
+        <div class="container">
+            <!--about-wrap -->
+            <div class="about-wrap">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="about-title ab-hero fl-wrap">
+                            <h2>Dlaczego warto wybrać naszą ofertę </h2>
+                            <h4>Sprawdź nasze możliwości</h4>
+                        </div>
+                    @await Html.PartialAsync("ParametryTech",(IEnumerable<Nieruchomosci.Data.Data.CMS.Parametr>)ViewBag.ModelParamTech)
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <div class="about-img fl-wrap">
+                            <img src="~/img/Biuro (0).jpg" class="respimg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- about-wrap end  -->
+        </div>
+    </section>
+    <!-- section end-->
+    @await Html.PartialAsync("PostyMiasto",(IEnumerable<Nieruchomosci.Data.Data.CMS.Post>)ViewBag.ModelPostyMiasto)
+    @await Html.PartialAsync("Rekomendacje",(IEnumerable<Nieruchomosci.Data.Data.CMS.Rekomendacja>)ViewBag.ModelRekomendacje)
+</div>
+<!-- content end -->

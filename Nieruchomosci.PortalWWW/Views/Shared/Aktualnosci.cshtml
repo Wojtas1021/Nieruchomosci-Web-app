@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Nieruchomosci.Data.Data.CMS.Aktualnosc>
+<div class="col-md-8">
+    <div class="post-container fl-wrap">
+        <!-- article> -->
+        @foreach(var item in Model)
+        {
+        <article class="post-article fl-wrap">
+            <div class="list-single-main-media fl-wrap">
+                <img src="@item.Foto" class="respimg" alt="">
+            </div>
+            <div class="list-single-main-item fl-wrap block_box">
+                <h2 class="post-opt-title"><a href="blog-single.html">@item.Tytul</a></h2>
+                <p>@item.Tresc</p>
+                <span class="fw-separator fl-wrap"></span>
+                <div class="post-opt">
+                    <ul class="no-list-style">
+                        <li><i class="fal fa-calendar"></i> <span>@item.DataUtworzenia</span></li>
+                        <li><i class="fal fa-eye"></i> <span></span></li>
+                        <li><i class="fal fa-tags"></i> <a href="#"></a> , <a href="#"></a> </li>
+                    </ul>
+                </div>
+                <a href="blog-single.html" class="btn color-bg float-btn small-btn">@item.Komentarz</a>
+            </div>
+        </article>
+        }
+        <!-- article end -->
+        <!-- pagination-->
+        <div class="pagination">
+            <a href="#" class="prevposts-link"><i class="fa fa-caret-left"></i></a>
+            <a href="#">1</a>
+            <a href="#" class="current-page">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#" class="nextposts-link"><i class="fa fa-caret-right"></i></a>
+        </div>
+        <!-- pagination end-->
+    </div>
+</div>

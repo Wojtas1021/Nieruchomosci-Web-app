@@ -1,0 +1,203 @@
+﻿@model Nieruchomosci.Data.Data.Nieruchomosci.Nieruchomosc
+@{
+    ViewData["Title"] = "Szczegoly";
+    Layout = "~/Views/Shared/_NieruchomosciLayout.cshtml";
+}
+
+<div id="wrapper">
+    <!-- content -->
+    <div class="content">
+        <div class="gray-bg small-padding fl-wrap">
+            <div class="container">
+                <div class="row">
+                    <!--  listing-single content -->
+                    <div class="col-md-8">
+                        <div class="list-single-main-wrapper fl-wrap">
+                            <!--  list-single-opt_header-->
+                            <div class="list-single-opt_header fl-wrap">
+                                <ul class="list-single-opt_header_cat">
+                                    <li><a href="#" class="cat-opt color-bg">@Model.Forma</a></li>
+                                    <li><a href="#" class="cat-opt color-bg">@Model.RodzajNieruchomosci.Nazwa</a></li>
+                                </ul>
+                            </div>
+                            <!--  list-single-opt_header end -->
+                            <!--  list-single-header-item-->
+                            <div class="list-single-header-item  fl-wrap" id="sec1">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h1>@Model.Tytul <span class="verified-badge tolt" data-microtip-position="bottom" data-tooltip="Verified"><i class="fas fa-check"></i></span></h1>
+                                        <div class="geodir-category-location fl-wrap">
+                                            <a href="#"><i class="fas fa-map-marker-alt"></i>  @Model.Adres</a>
+                                            <div class="listing-rating card-popup-rainingvis" data-starrating2="@Model.Ocena"><span class="re_stars-title"></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-single-header-footer fl-wrap">
+                                    <div class="list-single-header-price" data-propertyprise="@Model.Cena"><strong>@Model.Cena</strong></div>
+                                    <div class="list-single-header-date"><span>@Model.DataUtworzenia</span></div>
+                                </div>
+                            </div>
+                            <div class="list-single-main-media fl-wrap">
+                                <div class="single-slider-wrapper carousel-wrap fl-wrap">
+                                    <div class="slider-for fl-wrap carousel lightgallery">
+                                        <!--  slick-slide-item -->
+                                        <div class="slick-slide-item">
+                                            <div class="box-item">
+                                                <a href="@Model.Foto" class="gal-link popup-image"><i class="fal fa-search"></i></a>
+                                                <img src="@Model.Foto" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  slick-slide-item end -->
+                                        <!--  slick-slide-item -->
+                                        <div class="slick-slide-item">
+                                            <div class="box-item">
+                                                <a href="images/all/1.jpg" class="gal-link popup-image"><i class="fal fa-search"></i></a>
+                                                <img src="images/all/1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  slick-slide-item end -->
+                                        <!--  slick-slide-item -->
+                                        <div class="slick-slide-item">
+                                            <div class="box-item">
+                                                <a href="images/all/1.jpg" class="gal-link popup-image"><i class="fal fa-search"></i></a>
+                                                <img src="images/all/1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  slick-slide-item end -->
+                                        <!--  slick-slide-item -->
+                                        <div class="slick-slide-item">
+                                            <div class="box-item">
+                                                <a href="images/all/1.jpg" class="gal-link popup-image"><i class="fal fa-search"></i></a>
+                                                <img src="images/all/1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  slick-slide-item end -->
+                                    </div>
+                                    <div class="swiper-button-prev ssw-btn"><i class="fas fa-caret-left"></i></div>
+                                    <div class="swiper-button-next ssw-btn"><i class="fas fa-caret-right"></i></div>
+                                </div>
+                                <div class="single-slider-wrapper fl-wrap">
+                                    <div class="slider-nav fl-wrap">
+                                        <div class="slick-slide-item"><img src="images/all/1.jpg" alt=""></div>
+                                        <div class="slick-slide-item"><img src="images/all/1.jpg" alt=""></div>
+                                        <div class="slick-slide-item"><img src="images/all/1.jpg" alt=""></div>
+                                        <div class="slick-slide-item"><img src="images/all/1.jpg" alt=""></div>
+                                        <div class="slick-slide-item"><img src="images/all/1.jpg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-single-facts fl-wrap">
+                                <!-- inline-facts -->
+                                <div class="inline-facts-wrap">
+                                    <div class="inline-facts">
+                                        <i class="fal fa-home-lg"></i>
+                                        <h6>@Model.RodzajNieruchomosci.Nazwa</h6>
+                                    </div>
+                                </div>
+                                <!-- inline-facts end -->
+                                <!-- inline-facts  -->
+                                <div class="inline-facts-wrap">
+                                    <div class="inline-facts">
+                                        <i class="fal fa-users"></i>
+                                        <h6>@Model.Osoby</h6>
+                                    </div>
+                                </div>
+                                <!-- inline-facts end -->
+                                <!-- inline-facts -->
+                                <div class="inline-facts-wrap">
+                                    <div class="inline-facts">
+                                        <i class="fal fa-bed"></i>
+                                        <h6>@Model.Sypialnia</h6>
+                                    </div>
+                                </div>
+                                <!-- inline-facts end -->
+                                <!-- inline-facts -->
+                                <div class="inline-facts-wrap">
+                                    <div class="inline-facts">
+                                        <i class="fal fa-bath"></i>
+                                        <h6>@Model.Lazienka</h6>
+                                    </div>
+                                </div>
+                                <!-- inline-facts end -->
+                            </div>
+                            <div class="list-single-main-container fl-wrap">
+                                <!-- list-single-main-item -->
+                                <div class="list-single-main-item fl-wrap">
+                                    <div class="list-single-main-item-title">
+                                        <h3>Informacje o nieruchomości</h3>
+                                    </div>
+                                    <div class="list-single-main-item_content fl-wrap">
+                                     <div class="fw_hours fl-wrap"><span>@Model.Opis</span> <br></div>
+                                        <a asp-action="DodajDoKoszyka" asp-controller="Koszyk" asp-route-id="@Model.IdNieruchomosci" class="btn float-btn color-bg">Dodaj do koszyka</a>
+                                    </div>
+                                </div>
+                                <!-- list-single-main-item end -->
+                                <!-- list-single-main-item -->
+                                <div class="list-single-main-item fl-wrap">
+                                    <div class="list-single-main-item-title">
+                                        <h3>Powierzchnia @Model.Powierzchnia</h3>
+                                    </div>
+                                </div>
+                                <!-- list-single-main-item end -->
+                                <!-- list-single-main-item -->
+                                <div class="list-single-main-item fl-wrap">
+                                    <div class="list-single-main-item_content fl-wrap">
+                                        <div class="listing-features ">
+                                            <ul>
+                                                <li><a href="#"><i class="fal fa-dumbbell"></i>@Model.Silownia</a></li>
+                                                <li><a href="#"><i class="fal fa-wifi"></i> @Model.WiFi</a></li>
+                                                <li><a href="#"><i class="fal fa-parking"></i> @Model.Parking</a></li>
+                                                <li><a href="#"><i class="fal fa-cloud"></i>@Model.Klimatyzacja</a></li>
+                                                <li><a href="#"><i class="fal fa-swimmer"></i> @Model.Basen</a></li>
+                                                <li><a href="#"><i class="fal fa-cctv"></i>  @Model.Monitoring</a></li>
+                                                <li><a href="#"><i class="fal fa-washer"></i> @Model.Pralnia</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- listing-single content end-->
+                    <!-- sidebar -->
+                    <div class="col-md-4">
+                        <!--box-widget-->
+                        <div class="box-widget fl-wrap hidden-section" style="margin-top: 30px">
+                            <div class="box-widget-content fl-wrap color-bg">
+                                <div class="color-form reset-action">
+                                    <div class="color-form-title fl-wrap">
+                                        <h4>Koszyk</h4>
+                                    </div>
+                                    <form method="post" name="mortgage-form">
+                                        <div class="monterage-title fl-wrap">
+                                            <h5>Razem:</h5>
+                                            <input type="text" id="pmt" name="mPmt" value="0">
+                                            <div class="monterage-title-item">zł<span></span></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!--box-widget end -->
+                        <!--box-widget-->
+                        <div class="box-widget fl-wrap">
+                            <div class="box-widget-title fl-wrap">Dokumenty</div>
+                            <div class="box-widget-content fl-wrap">
+                                <div class="bwc_download-list">
+                                    <a href="#" download><span><i class="fal fa-file-pdf"></i></span>Prezentacja</a>
+                                    <a href="#" download><span><i class="fal fa-file-word"></i></span>Certyfikat</a>
+                                    <a href="#" download><span><i class="fal fa-file-pdf"></i></span>Pany nieruchomości</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--box-widget end -->
+                    </div>
+                    <!--  sidebar end-->
+                </div>
+                <div class="fl-wrap limit-box"></div>
+            </div>
+        </div>
+    </div>
+    <!-- content end -->
+</div>
+<!-- wrapper end -->
